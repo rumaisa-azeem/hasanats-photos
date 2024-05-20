@@ -1,16 +1,14 @@
-import { useState, useEffect } from 'react';
 import {ArrowForward, KeyboardDoubleArrowDown} from "@mui/icons-material";
 import { Link } from 'react-scroll';
+import Carousel from '../elements/Carousel';
 
-import coverPhoto from "../media/cover-photo.JPG";
+import heroPhoto from "../../assets/hero-photos/hero-photo.JPG";
+import heroPhoto2 from "../../assets/hero-photos/hero-photo2.JPG";
+import heroPhoto3 from "../../assets/hero-photos/hero-photo3.jpg";
 
 export default function Hero() {
 
-    const coverImageStyle = {
-        backgroundImage: `url(${coverPhoto})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-    };
+    const heroPhotos = [heroPhoto, heroPhoto2, heroPhoto3];
 
     return (
         <div>
@@ -43,7 +41,9 @@ export default function Hero() {
 
                 </div>
 
-                <div className="h-full col-span-7" style={coverImageStyle}></div>
+                <div className="col-span-7">
+                    <Carousel photos={heroPhotos}/>
+                </div>
 
             </section>
         </div>

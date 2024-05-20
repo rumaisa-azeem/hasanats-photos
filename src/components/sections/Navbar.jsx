@@ -8,7 +8,7 @@ const navLinks = [
     },
     {
         name: 'services',
-        link: ''
+        link: '/services'
     },
     {
         name: 'contact',

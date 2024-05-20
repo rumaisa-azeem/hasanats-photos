@@ -1,4 +1,4 @@
-import aboutPhoto from '../media/about-photo.jpeg';
+import aboutPhoto from '../../assets/about-photo.jpeg';
 import { ArrowForward } from "@mui/icons-material";
 
 const aboutText = "" +
