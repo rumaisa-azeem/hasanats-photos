@@ -3,11 +3,6 @@ import { Carousel as FlowbiteCarousel } from 'flowbite-react';
 export default function Carousel({photos}) {
 
     const theme = {
-        "root": {
-            "base": "relative h-full w-full",
-            "leftControl": "absolute left-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none",
-            "rightControl": "absolute right-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none"
-        },
         "scrollContainer": {
             "base": "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth",
             "snap": "snap-x"
