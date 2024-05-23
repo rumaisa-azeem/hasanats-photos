@@ -7,9 +7,9 @@ const aboutText = "" +
     "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate " +
     "velit esse cillum dolore eu fugiat nulla pariatur.";
 
-export default function About() {
+export default function About(props) {
     return (
-        <section id="about" className="h-screen flex flex-col justify-center text-white">
+        <section id="about" className={"h-screen flex flex-col justify-center text-white " + props.className}>
             <div className="container mx-auto flex gap-16">
                 <div className="w-full flex justify-end">
                     <img src={aboutPhoto} className="rounded-full" height="400px" width="400px"/>

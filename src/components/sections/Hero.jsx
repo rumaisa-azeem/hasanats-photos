@@ -6,12 +6,12 @@ import heroPhoto from "../../assets/hero-photos/hero-photo.JPG";
 import heroPhoto2 from "../../assets/hero-photos/hero-photo2.JPG";
 import heroPhoto3 from "../../assets/hero-photos/hero-photo3.jpg";
 
-export default function Hero() {
+export default function Hero(props) {
 
     const heroPhotos = [heroPhoto, heroPhoto2, heroPhoto3];
 
     return (
-        <div>
+        <div className={props.className}>
             <section className="grid max-w-screen h-screen grid-cols-12">
                 <div className="h-full flex flex-col justify-center align-middle col-span-5 p-6 gap-2">
 
@@ -39,7 +39,7 @@ export default function Hero() {
                         </a>
                     </div>
 
-                    <Link to="about" smooth={'easeInOutQuad'} duration={600} className="text-left mt-4 w-fit hover:translate-y-1 transition ease-in-out text-4xl cursor-pointer">
+                    <Link to="about" containerId="scrollable" smooth={'easeInOutQuad'} duration={600} className="text-left mt-4 w-fit hover:translate-y-1 transition ease-in-out text-4xl cursor-pointer">
                         <KeyboardDoubleArrowDown fontSize="inherit"/>
                     </Link>
 
