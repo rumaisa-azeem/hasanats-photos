@@ -25,10 +25,12 @@ export default function Hero() {
                     </div>
 
                     <div className='flex justify-items-start items-center gap-2'>
-                        <button className="w-fit px-3 py-2 font-semibold border-2 border-black rounded bg-white text-black
+                        <a href="mailto:abulhasanatali@outlook.com">
+                            <button className="w-fit px-3 py-2 font-semibold border-2 border-black rounded bg-white text-black
                             hover:-translate-y-1 transition ease-in-out">
-                            contact me
-                        </button>
+                                contact me
+                            </button>
+                        </a>
                         <a href="/portfolio">
                             <button className="w-fit px-3 py-2 bg-black text-white font-semibold border-2 rounded border-transparent
                             hover:-translate-y-1 flex gap-1 items-center transition ease-in-out">

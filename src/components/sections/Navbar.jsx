@@ -12,7 +12,8 @@ const navLinks = [
     },
     {
         name: 'contact',
-        link: ''
+        link: 'mailto:abulhasanatali@outlook.com',
+        title: 'email abulhasanatali@outlook.com'
     }
 ];
 
@@ -47,9 +48,13 @@ export default function Navbar(props) {
         <div className={"fixed w-screen top-0 z-40 py-4 px-6 flex flex-row gap-4 items-center " + props.className} style={{color: props.navTextColor}}>
             <a className="font-bold text-2xl" href="/" onMouseEnter={flashCamera}>{brandText}</a>
             <div className="flex gap-1 items-center">
-                {navIcons.map(item => <a href={item.link} target="_blank" className="hover:translate-y-1 transition ease-in-out" rel="noreferrer">{item.icon}</a>)}
+                {navIcons.map(item =>
+                    <a href={item.link} target="_blank" className="hover:translate-y-1 transition ease-in-out" rel="noreferrer">
+                        {item.icon}
+                    </a>)}
             </div>
-            {navLinks.map(item => <a href={item.link} className="hover:translate-y-1 transition ease-in-out">{item.name}</a>)}
+            {navLinks.map(item =>
+                <a href={item.link} title={item.title} className="hover:translate-y-1 transition ease-in-out">{item.name}</a>)}
         </div>
     );
 }
