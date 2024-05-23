@@ -44,7 +44,7 @@ export default function Navbar(props) {
     };
 
     return (
-        <div className="fixed w-screen top-0 z-40 py-4 px-6 flex flex-row gap-4 items-center" style={{color: props.navTextColor}}>
+        <div className={"fixed w-screen top-0 z-40 py-4 px-6 flex flex-row gap-4 items-center " + props.className} style={{color: props.navTextColor}}>
             <a className="font-bold text-2xl" href="/" onMouseEnter={flashCamera}>{brandText}</a>
             <div className="flex gap-1 items-center">
                 {navIcons.map(item => <a href={item.link} target="_blank" className="hover:translate-y-1 transition ease-in-out" rel="noreferrer">{item.icon}</a>)}

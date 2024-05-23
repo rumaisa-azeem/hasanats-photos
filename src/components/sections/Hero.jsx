@@ -29,13 +29,15 @@ export default function Hero() {
                             hover:-translate-y-1 transition ease-in-out">
                             contact me
                         </button>
-                        <button className="w-fit px-3 py-2 bg-black text-white font-semibold border-2 rounded border-transparent
-                        hover:-translate-y-1 flex gap-1 items-center transition ease-in-out">
-                            see my portfolio <ArrowForward/>
-                        </button>
+                        <a href="/portfolio">
+                            <button className="w-fit px-3 py-2 bg-black text-white font-semibold border-2 rounded border-transparent
+                            hover:-translate-y-1 flex gap-1 items-center transition ease-in-out">
+                                see my portfolio <ArrowForward/>
+                            </button>
+                        </a>
                     </div>
 
-                    <Link to="about" smooth={'easeInOutQuad'} duration={600} className="text-left mt-4 w-fit hover:translate-y-1 transition ease-in-out text-4xl">
+                    <Link to="about" smooth={'easeInOutQuad'} duration={600} className="text-left mt-4 w-fit hover:translate-y-1 transition ease-in-out text-4xl cursor-pointer">
                         <KeyboardDoubleArrowDown fontSize="inherit"/>
                     </Link>
 
