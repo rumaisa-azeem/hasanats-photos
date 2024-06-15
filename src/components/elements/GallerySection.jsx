@@ -61,12 +61,12 @@ export default function GallerySection({sectionTitle, images, id, className}) {
             <h2 className="font-bold text-4xl mt-14 mb-8">portfolio / <span className="text-neutral-500">{sectionTitle}</span></h2>
             <div className="h-5/6 overflow-y-scroll bg-neutral-100 p-4">
                 <ImageList cols={4} gap={8} variant="masonry" >
-                    {itemData.map((item, index) =>
+                    {images.map((imageURL, index) =>
                         <ImageListItem key={index}>
                             <img
-                                srcSet={`${item.image}`}
-                                src={`${item.image}`}
-                                alt={item.title}
+                                srcSet={`${imageURL}`}
+                                src={`${imageURL}`}
+                                alt={''}
                                 loading="lazy"
                             />
                         </ImageListItem>
