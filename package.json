@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "flickr-sdk": "^7.0.0-beta.7",
     "flowbite-react": "^0.9.0",
+    "material-icons": "^1.13.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.22.3",
