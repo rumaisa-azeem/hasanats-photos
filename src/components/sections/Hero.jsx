@@ -5,10 +5,11 @@ import Carousel from '../elements/Carousel';
 import heroPhoto from "../../assets/hero-photos/hero-photo.JPG";
 import heroPhoto2 from "../../assets/hero-photos/hero-photo2.JPG";
 import heroPhoto3 from "../../assets/hero-photos/hero-photo3.jpg";
+import heroPhoto4 from "../../assets/hero-photos/hero-photo4.jpg";
 
 export default function Hero(props) {
 
-    const heroPhotos = [heroPhoto, heroPhoto2, heroPhoto3];
+    const heroPhotos = [heroPhoto, heroPhoto2, heroPhoto3, heroPhoto4];
 
     return (
         <div className={props.className}>
