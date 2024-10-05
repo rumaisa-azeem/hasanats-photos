@@ -12,12 +12,12 @@ export default function Hero(props) {
 
     return (
         <div className={props.className}>
-            <section className="grid max-w-screen h-screen grid-cols-12">
-                <div className="h-full flex flex-col justify-center align-middle col-span-5 p-6 gap-2">
+            <section className="max-w-screen h-screen flex flex-col-reverse md:flex-row pb-6 md:pb-0">
+                <div className="md:h-full flex flex-col justify-center align-middle p-6 md:gap-2">
 
                     <h1 className="font-extrabold text-left">
-                        <span className="text-6xl">photos by</span> <br/>
-                        <span className="text-8xl">hasanat ali.</span>
+                        <span className="text-2xl md:text-6xl">photos by</span> <br/>
+                        <span className="text-4xl md:text-8xl">hasanat ali.</span>
                     </h1>
 
                     <div className="text-left pb-2">
@@ -39,14 +39,17 @@ export default function Hero(props) {
                         </a>
                     </div>
 
-                    <Link to="about" containerId="scrollable" smooth={'easeInOutQuad'} duration={600} className="text-left mt-4 w-fit hover:translate-y-1 transition ease-in-out text-4xl cursor-pointer">
+                    <Link to="about" containerId="scrollable" smooth={'easeInOutQuad'} duration={600} className="text-left mt-4 w-fit hover:translate-y-1 transition ease-in-out text-4xl cursor-pointer hidden md:inline">
                         <KeyboardDoubleArrowDown fontSize="inherit"/>
                     </Link>
 
                 </div>
 
-                <div className="col-span-7">
-                    <Carousel photos={heroPhotos}/>
+                <div className="w-screen h-full relative md:w-1/2 flex-grow">
+                    <div className={"absolute w-full h-full"}>
+                        <Carousel photos={heroPhotos}/>
+                    </div>
+                    <div className={"bg-gradient-to-b from-white to-transparent h-1/4 w-full absolute md:invisible"}></div>
                 </div>
 
             </section>

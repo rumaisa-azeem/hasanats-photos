@@ -36,7 +36,7 @@ export default function Home() {
     return (
         <div className="transition ease-in-out duration-700" style={{backgroundColor: bgColor}}>
             <Navbar navTextColor={navTextColor}/>
-            <div id="scrollable" className="h-screen overflow-scroll snap-y">
+            <div id="scrollable" className="h-screen overflow-scroll md:snap-y">
                 <Hero className="snap-start"/>
                 <About className="snap-start"/>
                 <Footer className="snap-center" />
