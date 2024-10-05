@@ -11,7 +11,6 @@ import events from "../../assets/gallery/events.jpeg";
 import corporate from "../../assets/gallery/corporate.jpeg";
 import portrait from "../../assets/gallery/portrait.jpg";
 import travel from "../../assets/gallery/travels.png";
-import city from "../../assets/gallery/city.png";
 
 const API_KEY = "b3a101b280639e227cc8dca08c847c83";
 const FLICKR_USER_ID = "200797313@N08";
@@ -31,24 +30,17 @@ const gallerySectionsInit = new Map([
             photoURLs: null
         }
     ],
-    ["portraits",
-        {
-            image : portrait,
-            flickrID : "72177720317935241",
-            photoURLs: null
-        }
-    ],
+    // ["portraits",
+    //     {
+    //         image : portrait,
+    //         flickrID : "72177720317935241",
+    //         photoURLs: null
+    //     }
+    // ],
     ["travel",
         {
             image : travel,
-            flickrID : "72177720317935311",
-            photoURLs: null
-        }
-    ],
-    ["city",
-        {
-            image : city,
-            flickrID : "72177720317927132",
+            flickrID : "72177720320903202",
             photoURLs: null
         }
     ],
@@ -85,7 +77,6 @@ export default function Portfolio() {
                 }
             }
             gallerySections.forEach( (section, title) => fetchData(section, title));
-            console.log("gallery sections at end of for loop: ", gallerySections);
             setPhotosLoaded(true);
         }
     }, [photosLoaded, gallerySections])
@@ -119,23 +110,23 @@ export default function Portfolio() {
     return (
         <div>
             <Navbar className="bg-neutral-800 shadow shadow-black" navTextColor="white"/>
-            <div id="scroll-sections" className="h-screen overflow-y-scroll snap-y">
+            <div id="scroll-sections" className="h-screen overflow-y-scroll md:snap-y">
                 <div id="gallery-sections" className="snap-start">
                     <div className="w-full min-h-screen mt-20 p-6 lg:flex lg:flex-col lg:justify-center xl:mt-0">
-                        <div className="mb-12">
+                        <div className="mb-4 md:mb-12">
                             <h1 className="text-6xl font-extrabold mb-4">portfolio</h1>
                             <p className="text-lg">here's some of my work...</p>
                         </div>
-                        <div className="flex justify-center">
-                            <div className="w-full grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                        <div className="flex justify-center mx-auto md:container">
+                            <div className="w-full grid grid-cols-2 gap-4 md:flex">
                                 {[...gallerySections.keys()].map((sectionTitle, index) =>
-                                    <Link to={"gallery-section-" + index} containerId="scroll-sections" smooth={'easeInOutQuad'} duration={600}>
+                                    <Link to={"gallery-section-" + index} containerId="scroll-sections" smooth={'easeInOutQuad'} duration={600} className={"md:w-1/3"}>
                                         <Card
                                             onMouseEnter={() => handleMouseEnter(index)}
                                             onMouseLeave={handleMouseLeave}
                                             key={index}
                                             imgSrc={gallerySections.get(sectionTitle).image}
-                                            className={"w-full hover:translate-y-2 transition duration-300 cursor-pointer ease-in-out" + (showHoverEffect && index!==hoveredIndex ? "filter grayscale" : "")}
+                                            className={"hover:translate-y-2 transition duration-300 cursor-pointer ease-in-out" + (showHoverEffect && index!==hoveredIndex ? "filter grayscale" : "")}
                                         >
                                             <h2 className="text-xl lg:text-2xl font-bold">{sectionTitle}</h2>
                                         </Card>
